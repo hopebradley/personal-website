@@ -1,4 +1,11 @@
 
 body {
-	background: blue;
+	background: pink;
+}
+
+#title {
+	background: white;
+	color: hotpink;
+	text-align: center;
+	font-family: "Lucida Console", monospace;
 }

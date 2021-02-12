@@ -1,11 +1,26 @@
 
 body {
 	background: pink;
+	font-family: "Lucida Console", monospace;
 }
 
 #title {
+	font-size: 75px;
 	background: white;
 	color: hotpink;
 	text-align: center;
-	font-family: "Lucida Console", monospace;
+}
+
+#labels {
+	font-size:20px;
+	text-align: center;
+	background: hotpink;
+	color: white;
+}
+
+#paras p {
+	color: white;
+	background: #EF7BB2;
+	margin-left: 20px;
+	width: 50%;
 }

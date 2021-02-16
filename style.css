@@ -1,14 +1,14 @@
 
 body {
-	background: pink;
-	font-family: "Lucida Console", monospace;
+	background: #FFF0F5;
+	font-family: Arial;
 }
 
 #title {
 	font-size: 75px;
 	background: white;
 	color: hotpink;
-	text-align: center;
+	text-align: left;
 }
 
 #labels {
@@ -18,9 +18,10 @@ body {
 	color: white;
 }
 
-#paras p {
+.paras {
+	font-family: "Lucida Console", monospace;
 	color: white;
-	background: #EF7BB2;
+	background: pink;
 	margin-left: 20px;
 	width: 50%;
 }

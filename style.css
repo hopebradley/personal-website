@@ -25,3 +25,14 @@ body {
 	margin-left: 20px;
 	width: 50%;
 }
+
+button {
+	margin-left: 40%;
+	margin-right: 40%;
+	font-family: Arial;
+	font-size: 20px;
+	width: 16%;
+	height: 60px;
+	background: black;
+	color: white;
+}

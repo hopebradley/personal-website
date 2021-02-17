@@ -1,31 +1,63 @@
 $(document).ready(function() {
-  const colorz = ['#EB9C9C', '#EBC49C', '#FFF287', '#B3E9D1', 
-    '#B3CBE9', '#CAC7FF', '#D9B0F3', '#FFC5EC'];
-  const lightColorz = ['#EB9C9C', '#EBC49C', '#FFF287', '#B3E9D1', 
-    '#B3CBE9', '#CAC7FF', '#D9B0F3', '#FFC5EC'];
 
-  //const elems = document.getElementsByClassName('colorchange');
+  const blueTheme = {
+    headerFooter: '#b2cee3',
+    main: '#1687a7',
+    other: '#19576f',
+    background: '#f6f5f5'
+  }
 
-  const elems = $('.colorchange');
+  const purpleTheme = {
+    headerFooter: '#c1a1d3', 
+    main: '#1a508b',
+    other: '#0d335d',
+    background: '#fff3e6'
+  }
 
+  const coffeeTheme = {
+    headerFooter: '#eabf9f', 
+    main: '#b68973',
+    other: '#1e212d',
+    background: '#faf3e0'
+  }
 
-  console.log(elems.length);
-  for (let i=0; i<elems.length; i++) {
-    console.log(elems[i]);
+  const perryTheme = {
+    headerFooter: '#a3d2ca', 
+    main: '#5eaaa8',
+    other: '#db6400',
+    background: '#f8f1f1'
   }
 
 
+  const colorz = [blueTheme, purpleTheme, coffeeTheme, perryTheme];
+  
+  const headFoot = $('.headfoot');
+  const mainSection = $('.paras');
+  const otherSection = $('.other-stuff');
+
   const colorChanger = document.getElementById('colorchanger');
 
-  function colorChange() {
-    const color = colorz[Math.floor(Math.random()*colorz.length)];
-    const backgroundColor = lightColorz[Math.floor(Math.random()*lightColorz.length)];
-    
-    for (let i=0; i<elems.length; i++) {
-      console.log(elems);
-      elems[i].style.background = color;
+  function colorLoop(section, color) {
+    for (let i=0; i<section.length; i++) {
+      console.log(section[i]);
+      section[i].style.background = color;
     }
-    document.body.style.background = backgroundColor; 
+  }
+
+
+
+  function colorChange() {
+    const theme = Math.floor(Math.random()*colorz.length);
+    const color1 = (colorz[theme]).headerFooter;
+    const color2 = (colorz[theme]).main;
+    const color3 = (colorz[theme]).other;
+    const color4 = (colorz[theme]).background;
+
+    colorLoop(headFoot, color1);
+    colorLoop(mainSection, color2);
+    colorLoop(otherSection, color3);
+    document.body.style.background = color4; 
+
   }
 
     colorChanger.addEventListener('click', colorChange);

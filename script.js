@@ -28,6 +28,38 @@ $(document).ready(function() {
     background: '#f8f1f1'
   }
 
+  //this is the form input stuff
+  const gifSearchText = $('#gif-search-text');
+  const giphy_api_url = 'http://api.giphy.com/v1/gifs/search';
+
+  $('#gifsubmit').click(function() {
+
+    let giphyParams = {
+      api_key: 'cLnO8RMdEp5SPe1CQNmuvOmY9ZlNbvFr',
+      //q: 'ferb',
+      q: $('#gif-search-text').val(),
+      limit: 1
+    }
+
+    $.get(giphy_api_url, giphyParams, function(result) {
+      let gifUrl = result.data[0].images.preview_gif.url;
+
+      //console.log(result.data);
+      //console.log(result.data[0]);
+      //console.log(result.data[0]);
+      console.log(result.data[0].images.preview_gif.url);
+
+      $('#gifimage').attr("src", gifUrl);
+
+    })
+
+    //console.log(gifSearchText.val());
+  });
+
+
+
+
+
 
   const colorz = [blueTheme, purpleTheme, coffeeTheme, perryTheme];
   
@@ -61,6 +93,15 @@ $(document).ready(function() {
   }
 
     colorChanger.addEventListener('click', colorChange);
+
+
+
+
+
+
+
+
+
 
 
 });

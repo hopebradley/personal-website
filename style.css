@@ -92,6 +92,10 @@ button {
   margin-bottom: 20px;
 }
 
+.need-space {
+  padding: 9px;
+}
+
 .marble {
   width: 100%;
 }

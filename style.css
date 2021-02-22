@@ -92,19 +92,29 @@ button {
   width: 100%;
 }
 
-
-.other-stuff {
+.right-container {
   width: 28%;
   float: right;
+}
+
+
+.other-stuff {
   background: #19576f;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .other-txt {
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   padding-top: 5px;
+}
+
+#giphy {
+  text-align: center;
+  background: black;
+  padding: 3px;
+  color: white;
 }
 
 .contact {

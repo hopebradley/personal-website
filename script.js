@@ -30,7 +30,7 @@ $(document).ready(function() {
 
   //this is the form input stuff
   const gifSearchText = $('#gif-search-text');
-  const giphy_api_url = 'http://api.giphy.com/v1/gifs/search';
+  const giphy_api_url = 'https://api.giphy.com/v1/gifs/search';
 
   $('#gifsubmit').click(function() {
 
